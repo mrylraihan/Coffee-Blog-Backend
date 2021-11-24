@@ -1,7 +1,7 @@
 'use strict'
 
 // creating a base name for the mongodb
-const mongooseBaseName = 'coffee-blog-main'
+const mongooseBaseName = 'coffee-blog-db'
 
 // create the mongodb uri for development and test
 const database = {

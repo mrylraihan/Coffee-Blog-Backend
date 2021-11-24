@@ -87,7 +87,7 @@ router.patch('/cafes/:id', requireToken, removeBlanks, (req, res, next) => {
 
 // DESTROY
 // DELETE /examples/5a7db6c74d55bc51bdf39793
-router.delete('/cafe/:id', requireToken, (req, res, next) => {
+router.delete('/cafes/:id', requireToken, (req, res, next) => {
   Cafe.findById(req.params.id)
     .then(handle404)
   // ensure the signed in user (req.user.id) is the same as the example's owner (example.owner)
