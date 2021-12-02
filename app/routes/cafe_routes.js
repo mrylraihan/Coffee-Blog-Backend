@@ -29,23 +29,23 @@ const router = express.Router()
 
 // INDEX
 // GET /cafes
-// router.get('/cafes', requireToken, (req, res, next) => {
-//   Cafe.find()
-//   // respond with status 200 and JSON of the cafes
-//     .then((cafes) => res.status(200).json({ cafes: cafes }))
-//   // if an error occurs, pass it to the handler
-//     .catch(next)
-// })
-// INDEX
-// GET /cafes
-// practice with out token!
-router.get('/cafes', (req, res, next) => {
+router.get('/cafes', requireToken, (req, res, next) => {
   Cafe.find()
   // respond with status 200 and JSON of the cafes
     .then((cafes) => res.status(200).json({ cafes: cafes }))
   // if an error occurs, pass it to the handler
     .catch(next)
 })
+// INDEX
+// GET /cafes
+// practice with out token!
+// router.get('/cafes', (req, res, next) => {
+//   Cafe.find()
+//   // respond with status 200 and JSON of the cafes
+//     .then((cafes) => res.status(200).json({ cafes: cafes }))
+//   // if an error occurs, pass it to the handler
+//     .catch(next)
+// })
 
 // SHOW
 // GET /examples/5a7db6c74d55bc51bdf39793
